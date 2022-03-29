@@ -1,7 +1,7 @@
 const connectToMongoose=require('./db')
 
 connectToMongoose();
-var cors = require('cors')
+var cors = require('cors')//to make connection between
 const express = require('express')
 const app = express()
 const port = 5000

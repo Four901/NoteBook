@@ -11,6 +11,7 @@ const Notes = (props) => {
         fetchAllNotes();
         // eslint-disable-next-line
     }, []);
+    // we are using this line in useEffect just to use it as componentDidMount
     const updateNotehandle=(nott)=>{
         console.log(nott)
         setnote({id:nott._id,title:nott.title,description:nott.description,tag:nott.tag})

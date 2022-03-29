@@ -21,7 +21,7 @@ const Login =  (props) => {
           {
             props.showAlert("Login was Successfull","success")
              localStorage.setItem('token',json.AuthToken)
-             navigate('/')
+             navigate('/')//just like history if we want to go to another page automatically
           }
           else{
             props.showAlert("Can't Login","error")

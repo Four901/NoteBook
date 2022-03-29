@@ -5,7 +5,7 @@ const User=require('../models/User')
 const { body, validationResult } = require('express-validator');
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
-const JWT_KEY="ohkbroletsdoit"
+const JWT_KEY="ohknoprob"
 const fetchUser=require('../middleware/fetchUser')
 
 router.post('/createuser',[
@@ -94,7 +94,7 @@ const errors = validationResult(req);
         id:user.id
       }
     }
-    var AuthToken=jwt.sign(data,JWT_KEY);
+    var AuthToken=jwt.sign(data,JWT_KEY);//over here we are signing the jwtauth token which is containing the id of the user
     console.log(AuthToken)
     Success=true
     res.json({Success,AuthToken})
